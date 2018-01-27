@@ -1,28 +1,344 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Hank Quinlan, Horrible Cop</title>
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="container">
-            <div class="blurb">
-                <h1>Hi there, I'm Hank Quinlan!</h1>
-                <p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-            </div><!-- /.blurb -->
-        </div><!-- /.container -->
-        <footer>
-            <ul>
-                <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-                <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-            </ul>
-        </footer>
-    </body>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">	
+	<title>我的消息</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background-color: #fff;
+    }
+    .hx {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    .close{
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    .close span {
+      height: 30px;
+      width: 30px;
+      vertical-align: middle;
+      position: absolute;
+      margin-right: 12px;
+      display: block;
+      right: 0;
+    }
+    .hx h2{
+      background-color: #fff;
+      margin: 0;
+      margin-bottom: 20px;
+      color: #443219;
+      margin-left: 10px;
+    }
+    .carousel{
+      background-color: #fff;
+    }
+    .hx_nav{
+      width: 100%;
+      height: 82px;
+      line-height: 82px;
+      display: inline-block;
+    }
+    .hx_nav ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .hx_nav ul li {
+      list-style: none;
+      display: inline-block;
+      flex: 1;
+    }
+    /*.hx_nav ul li:first-child{
+      margin-left: 20px;
+    }
+    .hx_nav ul li:last-child{
+      margin-right: 20px;
+    }*/
+    .hx_gas{
+      width: 100%;
+      height: 10px;
+    }
+    .hx_gas span {
+      width: 100%;
+      height: 10px;
+      display: block;
+      background-color: #f0f2ea;
+    }
+    .hx_footer{
+      width: 100%;
+    }
+    .hx_footer .footer_top{
+      width: 100%;
+      height: 106px;
+      padding: 0 33px;
+      display: inline-block;
+      border-bottom: 1px solid #f0f2ea;
+    }
+    .footer_top .top_left {
+      margin: 29px 0 30px 0 ;
+      display: inline-block;
+    }
+    .top_left img{
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 11px;
+    }
+    .top_left .left_text{
+      display: inline-block;
+    }
+    .text_title{
+      font-family: '微软雅黑';
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .text_dsc{
+      font-family: '微软雅黑';
+      font-size: 14px;
+      color: #9b9b9b;
+    }
+    .footer_top .top_right{
+      height: 106px;
+      line-height: 106px;
+      float: right;
+      display: inline-block;
+      color: #bbb;
+      font-family: '微软雅黑';
+      font-size: 10px;
+    }
+    .hx_footer .footer_bottom{
+      width: 100%;
+      height: 106px;
+      padding: 0 33px;
+      display: inline-block;
+    }
+    .footer_bottom .bottom_left {
+      margin: 29px 0 30px 0 ;
+      display: inline-block;
+    }
+    .bottom_left img{
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 11px;
+    }
+    .bottom_left .left_text{
+      display: inline-block;
+    }
+    .footer_bottom .top_right{
+      height: 106px;
+      line-height: 106px;
+      float: right;
+      display: inline-block;
+      color: #bbb;
+      font-family: '微软雅黑';
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hx">
+    <div class="close" id="close">
+      <!-- <span class="glyphicon glyphicon-remove"></span> -->
+      <span><img src="../images/nav1.png" alt="" style="height: 30px; width: 30px;"></span>
+    </div>
+    <h2>我的消息</h2>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="../images/ad1.png" alt="">
+        </div>
+        <div class="item">
+          <img src="../images/ad2.png" alt="">
+        </div>
+        <div class="item">
+          <img src="../images/ad3.png" alt="">
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+    <div class="hx_nav">
+      <ul>
+        <li><a href="../static/zhuye.html"><img src="../images/tab1.png" alt="" style="height: 50px; width: 50px"></a></li>
+        <li><a href="../static/youhuiquan.html"><img src="../images/tab2.png" alt="" style="height: 50px; width: 50px"></a></li>
+        <li><a href="../static/gongyi.html"><img src="../images/tab3.png" alt="" style="height: 50px; width: 50px"></a></li>
+      </ul>
+    </div>
+    <div class="hx_gas">
+      <span></span>
+    </div>
+    <div class="hx_footer">
+      <div class="footer_top">
+        <div class="top_left">
+          <img src="../images/tab4.png" alt="" style="height: 50px; width: 50px">
+          <div class="left_text">
+            <p class="text_title">通知</p>
+            <p class="text_dsc">全球第一个XX平台</p>
+          </div>
+        </div>
+        <div class="top_right">
+          <p>昨天&nbsp;10:31</p>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <div class="bottom_left">
+          <img src="../images/tab6.png" alt="" style="height: 50px; width: 50px">
+          <div class="left_text">
+            <p class="text_title">客服</p>
+            <p class="text_dsc">联系客服</p>
+          </div>
+        </div>
+        <div class="top_right">
+          <p>今天&nbsp;10:31</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+  <script>
+  $(function () {
+    $('.carousel').carousel({
+      interval: 2000,
+      pause: 'hover'
+    });
+    // 实现轮播图的手动滑动功能
+    // 获取手指在轮播图元素上的一个滑动方向（左右）
+    // 获取界面上轮播图容器
+    var $carousels = $('.carousel');
+    var startX, endX;
+    // 在一定的滑动范围内，才切换图片
+    var offset = 20;
+    // 注册滑动事件
+    $carousels.on('touchstart', function (e) {
+      // 手指摸动时开始记录一下手指所在的坐标X
+      startX = e.originalEvent.touches[0].clientX;
+    });
+    $carousels.on('touchmove', function (e) {
+      // 记录手指离开屏幕一瞬间的位置，用move事件重复赋值
+      endX = e.originalEvent.touches[0].clientX;
+    });
+    $carousels.on('touchend', function (e) {
+      // 结束触摸一瞬间记录手指最后所在坐标的位置endX
+      // 比较endX与startX的大小，并获取每次运动的距离，当距离大于一定值时认为是方向变化
+      var distance = Math.abs(startX - endX);
+      if (distance > offset) {
+        // 说明有方向变化，判断上一张还是下一张出现
+        $(this).carousel(startX > endX ? 'next' : 'prev');
+      }
+    })
+  })
+  $('#close').click(function () {
+    // scheme://back?t=时间戳&param={"topage":"home","type":"native","data1":1}
+    requestHybrid({
+      tagname: 'back',
+      param: {
+        topage: 'home',
+        type: 'native',
+        data1: 1
+      }
+    });
+  });
+   $('.bottom_left img').click(function () {
+   requestHybrid({  // scheme://forward?t=时间戳&param={"topage":"home","type":"native","data2":2}
+    // scheme%3A%2F%2Fforward%3Ft%3D1512469364873%26param%3D%7B%22topage%22%3A%22home%22%2C%22type%22%3A%22native%22%2C%22data2%22%3A2%7D
+    tagname: 'forward',
+    param: {
+      // 要去到的页面
+      topage: 'chat', // home 改为 chat
+      // 跳转方式，h5跳Native
+      type: 'native',
+      data2: 2
+    }
+   });
+  });
+  // 实现hybrid
+    window.Hybrid = window.Hybrid || {}; // 定义窗口
+    var bridgePostMsg = function (url) {
+      var u = navigator.userAgent;
+      if (u.indexOf('iPhone') > -1) { // 判断是否是苹果手机
+        window.location = url;
+      } else {
+        var ifr = $('<iframe style="display: none;" src="' + url + '"/>');
+        $('body').append(ifr);
+        setTimeout (function () {
+          ifr.remove();
+        }, 1000)
+      }
+    };
+    var _getHybridUrl = function (params) {
+      var k, paramStr = '', url = 'scheme://';
+      url += params.tagname + '?t=' + new Date().getTime(); // 设置时间戳，防止URL不起效
+      if(params.callback) {
+        url += '&callback=' + params.callback;
+        delete params.callback;
+      }
+      if(params.param) {
+        paramStr = typeof params.param == 'object' ? JSON.stringify(params.param) : params.param;
+        url += '&param=' + encodeURIComponent(paramStr);
+      }
+      return url;
+    };
+    var requestHybrid = function (params) {
+      // 生成唯一执行函数，执行后销毁
+      var tt = (new Date().getTime());
+      var t = 'hybrid_' + tt;
+      var tmpFn;
+
+      // 处理有回调函数的情况
+      if(params.callback) {
+        tmpFn = params.callback;
+        params.callback = t;
+        window.Hybrid[t] = function (data) {
+          tmpFn(data);
+          delete window.Hybrid[t];
+        }
+      }
+      bridgePostMsg(_getHybridUrl(params));
+    };
+    // 获取版本信息，约定APP的navigation.userAgent版本包含版本信息：scheme/xx.xx.xx
+    var getHybridInfo = function () {
+      var platform_version = {};
+      var na = navigator.userAgent;
+      var info = na.match(/scheme\/\d\.\d\.\d/);  // 返回一个匹配成功的数组
+
+      if(info && info[0]) {
+        info = info[0].split('/');  // 使用/分开匹配到的信息，也是返回一个数组
+        if(info && info.length == 2) {
+          platform_version.platform = info[0];
+          platform_version.version = info[1];
+        }
+      }
+      return platform_version;
+    };
+  </script>
+</body>
 </html>
